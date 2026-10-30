@@ -1,0 +1,23 @@
+/** Valori di riferimento generici per adulti; vanno sostituiti con quelli stampati sul referto. */
+export const ANALITI: { nome: string; unita: string; min: number | null; max: number | null }[] = [
+  { nome: "Glicemia", unita: "mg/dL", min: 70, max: 100 },
+  { nome: "Emoglobina glicata (HbA1c)", unita: "%", min: 4, max: 5.7 },
+  { nome: "Colesterolo totale", unita: "mg/dL", min: null, max: 200 },
+  { nome: "Colesterolo HDL", unita: "mg/dL", min: 40, max: null },
+  { nome: "Colesterolo LDL", unita: "mg/dL", min: null, max: 115 },
+  { nome: "Trigliceridi", unita: "mg/dL", min: null, max: 150 },
+  { nome: "Creatinina", unita: "mg/dL", min: 0.7, max: 1.2 },
+  { nome: "eGFR (filtrato glomerulare)", unita: "mL/min", min: 60, max: null },
+  { nome: "Azotemia", unita: "mg/dL", min: 15, max: 50 },
+  { nome: "Acido urico", unita: "mg/dL", min: 3.5, max: 7.2 },
+  { nome: "AST (GOT)", unita: "U/L", min: null, max: 40 },
+  { nome: "ALT (GPT)", unita: "U/L", min: null, max: 41 },
+  { nome: "GGT", unita: "U/L", min: null, max: 60 },
+  { nome: "Sodio", unita: "mmol/L", min: 135, max: 145 },
+  { nome: "Potassio", unita: "mmol/L", min: 3.5, max: 5.1 },
+  { nome: "Emoglobina", unita: "g/dL", min: 13.5, max: 17.5 },
+  { nome: "Piastrine", unita: "10³/µL", min: 150, max: 400 },
+  { nome: "TSH", unita: "mIU/L", min: 0.4, max: 4 },
+  { nome: "Vitamina D", unita: "ng/mL", min: 30, max: 100 },
+  { nome: "PSA totale", unita: "ng/mL", min: null, max: 4 },
+];

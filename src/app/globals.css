@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f3f6f7;
+  --card: #ffffff;
+  --card-2: #f7fafa;
+  --ink: #0f1f24;
+  --muted: #5b6e75;
+  --line: #e1e8ea;
+  --brand: #0d9488;
+  --brand-ink: #ffffff;
+  --brand-soft: #d9f3ef;
+  --ok: #16a34a;
+  --warn: #d97706;
+  --warn-soft: #fef3c7;
+  --bad: #dc2626;
+  --bad-soft: #fee2e2;
+  --info-soft: #e0f2fe;
+  --c1: #0d9488;
+  --c2: #6366f1;
+  --c3: #f59e0b;
+  --c4: #ec4899;
+  --band: rgba(13, 148, 136, 0.14);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a1215;
+    --card: #121d22;
+    --card-2: #172429;
+    --ink: #eaf3f4;
+    --muted: #8fa5ac;
+    --line: #23343a;
+    --brand: #2dd4bf;
+    --brand-ink: #04211e;
+    --brand-soft: #0f3a37;
+    --ok: #4ade80;
+    --warn: #fbbf24;
+    --warn-soft: #3a2c08;
+    --bad: #f87171;
+    --bad-soft: #3b1414;
+    --info-soft: #0c2d3f;
+    --c1: #2dd4bf;
+    --c2: #818cf8;
+    --c3: #fbbf24;
+    --c4: #f472b6;
+    --band: rgba(45, 212, 191, 0.16);
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-card: var(--card);
+  --color-card2: var(--card-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-brand: var(--brand);
+  --color-brandink: var(--brand-ink);
+  --color-brandsoft: var(--brand-soft);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --color-warnsoft: var(--warn-soft);
+  --color-bad: var(--bad);
+  --color-badsoft: var(--bad-soft);
+  --color-infosoft: var(--info-soft);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  font-size: 18px;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+@layer components {
+  .card {
+    @apply rounded-3xl border border-line bg-card p-5 shadow-[0_1px_2px_rgba(15,31,36,0.04),0_8px_24px_-12px_rgba(15,31,36,0.12)] sm:p-6;
+  }
+  .btn {
+    @apply inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-brand px-6 text-lg font-semibold text-brandink transition active:scale-[0.98] disabled:opacity-50;
+  }
+  .btn-ghost {
+    @apply inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl border border-line bg-card2 px-5 text-lg font-semibold text-ink transition active:scale-[0.98];
+  }
+  .input {
+    @apply min-h-14 w-full rounded-2xl border border-line bg-card2 px-4 text-xl text-ink outline-none transition focus:border-brand focus:ring-4 focus:ring-brand/20;
+  }
+  .label {
+    @apply mb-1.5 block text-base font-semibold text-muted;
+  }
+  .h-page {
+    @apply text-3xl font-bold tracking-tight sm:text-4xl;
+  }
+  .h-section {
+    @apply text-xl font-bold tracking-tight;
+  }
+}
+
+.recharts-text { font-size: 13px; }
+.recharts-cartesian-axis-tick-value { fill: var(--muted); }

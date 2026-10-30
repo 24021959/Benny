@@ -1,0 +1,747 @@
+[
+  {
+    "nome": "Uova strapazzate con spinaci",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "uova", "quantita": 2, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "spinaci", "quantita": 80, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiaini", "reparto": "Dispensa"},
+      {"nome": "parmigiano grattugiato", "quantita": 10, "unita": "g", "reparto": "Latticini e uova"}
+    ],
+    "preparazione": "Salta gli spinaci in padella con l'olio per due minuti. Aggiungi le uova sbattute e mescola a fuoco dolce finche' diventano cremose. Termina con il parmigiano.",
+    "proteine_g": 18.4,
+    "grassi_g": 15.9,
+    "carbo_netti_g": 1.9,
+    "kcal": 224,
+    "minuti": 10,
+    "tag": ["uova", "formaggio", "vegetariano", "veloce"]
+  },
+  {
+    "nome": "Yogurt greco con noci e semi di lino",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "yogurt greco bianco non zuccherato", "quantita": 120, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "noci", "quantita": 15, "unita": "g", "reparto": "Dispensa"},
+      {"nome": "semi di lino", "quantita": 10, "unita": "g", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Versa lo yogurt greco in una ciotola. Trita le noci e spolverale sopra insieme ai semi di lino macinati. Mescola e consuma subito.",
+    "proteine_g": 14.9,
+    "grassi_g": 20.0,
+    "carbo_netti_g": 6.0,
+    "kcal": 264,
+    "minuti": 10,
+    "tag": ["vegetariano", "veloce", "senza_cottura"]
+  },
+  {
+    "nome": "Frittata di zucchine e parmigiano",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "uova", "quantita": 2, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "zucchine", "quantita": 120, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "parmigiano grattugiato", "quantita": 15, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Affetta le zucchine sottili e falle rosolare nell'olio per cinque minuti. Sbatti le uova con il parmigiano e versale in padella sulle zucchine. Cuoci a fuoco medio-basso coprendo fino a quando la frittata e' rappresa.",
+    "proteine_g": 19.3,
+    "grassi_g": 24.0,
+    "carbo_netti_g": 3.3,
+    "kcal": 306,
+    "minuti": 20,
+    "tag": ["uova", "formaggio", "vegetariano"]
+  },
+  {
+    "nome": "Omelette ai funghi",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "uova", "quantita": 2, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "funghi champignon", "quantita": 100, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "burro", "quantita": 10, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "parmigiano grattugiato", "quantita": 10, "unita": "g", "reparto": "Latticini e uova"}
+    ],
+    "preparazione": "Pulisci e affetta i funghi, poi falli saltare nel burro per cinque minuti. Sbatti le uova con il parmigiano e versale nella padella. Ripiega l'omelette a meta' quando e' quasi rappresa.",
+    "proteine_g": 19.2,
+    "grassi_g": 20.7,
+    "carbo_netti_g": 3.1,
+    "kcal": 276,
+    "minuti": 15,
+    "tag": ["uova", "formaggio", "vegetariano", "veloce"]
+  },
+  {
+    "nome": "Ricotta con noci e semi di chia",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "ricotta vaccina", "quantita": 120, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "noci", "quantita": 20, "unita": "g", "reparto": "Dispensa"},
+      {"nome": "semi di chia", "quantita": 10, "unita": "g", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Metti la ricotta in una ciotola e schiacciala con una forchetta fino a renderla morbida. Aggiungi le noci tritate e cospargi i semi di chia. Servi a temperatura ambiente.",
+    "proteine_g": 17.9,
+    "grassi_g": 31.7,
+    "carbo_netti_g": 5.8,
+    "kcal": 380,
+    "minuti": 10,
+    "tag": ["formaggio", "vegetariano", "veloce", "senza_cottura"]
+  },
+  {
+    "nome": "Uova al tegamino con pomodorini",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "uova", "quantita": 2, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "pomodorini", "quantita": 80, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiaini", "reparto": "Dispensa"},
+      {"nome": "basilico", "quantita": 5, "unita": "g", "reparto": "Frutta e verdura"}
+    ],
+    "preparazione": "Scalda l'olio e fai appassire i pomodorini tagliati a meta' per due minuti. Rompi le uova sopra, copri e cuoci finche' l'albume e' rappreso. Completa con il basilico spezzato a mano.",
+    "proteine_g": 13.3,
+    "grassi_g": 13.1,
+    "carbo_netti_g": 3.0,
+    "kcal": 183,
+    "minuti": 15,
+    "tag": ["uova", "vegetariano", "veloce"]
+  },
+  {
+    "nome": "Uova strapazzate con salmone affumicato",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "uova", "quantita": 2, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "salmone affumicato", "quantita": 50, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "burro", "quantita": 10, "unita": "g", "reparto": "Latticini e uova"}
+    ],
+    "preparazione": "Sciogli il burro a fuoco dolce e versa le uova sbattute. Mescola fino a ottenere una consistenza cremosa. Aggiungi il salmone affumicato a striscioline appena prima di servire.",
+    "proteine_g": 21.6,
+    "grassi_g": 20.7,
+    "carbo_netti_g": 0.8,
+    "kcal": 276,
+    "minuti": 10,
+    "tag": ["uova", "pesce", "veloce"]
+  },
+  {
+    "nome": "Frittata di asparagi",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "uova", "quantita": 2, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "asparagi", "quantita": 150, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "parmigiano grattugiato", "quantita": 15, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiaini", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Elimina la parte dura degli asparagi, tagliali a pezzi e cuocili in padella con l'olio per otto minuti. Sbatti le uova con il parmigiano e versale sopra. Cuoci coperto a fuoco basso finche' la frittata e' rappresa.",
+    "proteine_g": 21.2,
+    "grassi_g": 17.1,
+    "carbo_netti_g": 3.5,
+    "kcal": 253,
+    "minuti": 20,
+    "tag": ["uova", "formaggio", "vegetariano"]
+  },
+  {
+    "nome": "Uova sode con crema di avocado",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "uova", "quantita": 2, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "avocado", "quantita": 80, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "succo di limone", "quantita": 5, "unita": "ml", "reparto": "Frutta e verdura"}
+    ],
+    "preparazione": "Cuoci le uova in acqua bollente per nove minuti, poi raffreddale e sgusciale. Schiaccia l'avocado con il succo di limone fino a ottenere una crema. Taglia le uova a meta' e servile con la crema sopra.",
+    "proteine_g": 14.2,
+    "grassi_g": 21.6,
+    "carbo_netti_g": 2.9,
+    "kcal": 263,
+    "minuti": 15,
+    "tag": ["uova", "vegetariano", "veloce"]
+  },
+  {
+    "nome": "Frittelle di uova e ricotta",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "uova", "quantita": 2, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "ricotta vaccina", "quantita": 60, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiaini", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Frulla le uova con la ricotta fino a ottenere un composto liscio. Scalda l'olio in padella antiaderente e versa piccole porzioni del composto. Gira le frittelle quando si staccano facilmente e cuoci un minuto per lato.",
+    "proteine_g": 19.2,
+    "grassi_g": 20.7,
+    "carbo_netti_g": 2.6,
+    "kcal": 274,
+    "minuti": 15,
+    "tag": ["uova", "formaggio", "vegetariano", "veloce"]
+  },
+  {
+    "nome": "Yogurt greco con chia e mandorle",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "yogurt greco bianco non zuccherato", "quantita": 120, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "semi di chia", "quantita": 15, "unita": "g", "reparto": "Dispensa"},
+      {"nome": "mandorle", "quantita": 15, "unita": "g", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Mescola lo yogurt greco con i semi di chia e lascia riposare cinque minuti. Trita grossolanamente le mandorle. Completa la ciotola con le mandorle e servi.",
+    "proteine_g": 16.5,
+    "grassi_g": 18.2,
+    "carbo_netti_g": 6.5,
+    "kcal": 256,
+    "minuti": 10,
+    "tag": ["vegetariano", "veloce", "senza_cottura"]
+  },
+  {
+    "nome": "Tortino di broccoli e uova",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "uova", "quantita": 2, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "broccoli", "quantita": 150, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "parmigiano grattugiato", "quantita": 10, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Lessa le cimette di broccolo per cinque minuti e falle saltare nell'olio. Sbatti le uova con il parmigiano, unisci i broccoli e versa il composto in una piccola teglia. Cuoci in forno a 180 gradi per circa 15 minuti.",
+    "proteine_g": 20.3,
+    "grassi_g": 22.9,
+    "carbo_netti_g": 6.8,
+    "kcal": 315,
+    "minuti": 25,
+    "tag": ["uova", "formaggio", "vegetariano"]
+  },
+  {
+    "nome": "Uova in camicia con spinaci e prosciutto crudo",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "uova", "quantita": 2, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "spinaci", "quantita": 100, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "prosciutto crudo", "quantita": 20, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "burro", "quantita": 10, "unita": "g", "reparto": "Latticini e uova"}
+    ],
+    "preparazione": "Appassisci gli spinaci nel burro e disponili su due piatti. Fai cuocere le uova in acqua appena fremente per tre minuti, poi adagiale sugli spinaci. Completa con il prosciutto crudo a striscioline.",
+    "proteine_g": 20.5,
+    "grassi_g": 21.1,
+    "carbo_netti_g": 2.3,
+    "kcal": 281,
+    "minuti": 15,
+    "tag": ["uova", "carne", "veloce"]
+  },
+  {
+    "nome": "Frittata di cavolfiore e mozzarella",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "uova", "quantita": 2, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "cavolfiore", "quantita": 120, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "mozzarella", "quantita": 40, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiaini", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Cuoci le cimette di cavolfiore al vapore per otto minuti e falle dorare nell'olio. Sbatti le uova, aggiungi il cavolfiore e la mozzarella a cubetti. Cuoci coperto a fuoco basso finche' la frittata e' rappresa.",
+    "proteine_g": 22.1,
+    "grassi_g": 20.1,
+    "carbo_netti_g": 4.8,
+    "kcal": 289,
+    "minuti": 20,
+    "tag": ["uova", "formaggio", "vegetariano"]
+  },
+  {
+    "nome": "Caprino su rucola con noci",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "caprino fresco", "quantita": 80, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "rucola", "quantita": 40, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "noci", "quantita": 15, "unita": "g", "reparto": "Dispensa"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiaini", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Disponi la rucola lavata su un piatto e condiscila con l'olio. Sbriciola il caprino sopra e aggiungi le noci spezzettate. Servi subito.",
+    "proteine_g": 17.7,
+    "grassi_g": 29.3,
+    "carbo_netti_g": 2.7,
+    "kcal": 345,
+    "minuti": 10,
+    "tag": ["formaggio", "vegetariano", "veloce", "senza_cottura"]
+  },
+  {
+    "nome": "Uova sode con prosciutto crudo e rucola",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "uova", "quantita": 2, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "prosciutto crudo", "quantita": 30, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "rucola", "quantita": 40, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiaini", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Cuoci le uova per nove minuti, raffreddale e tagliale a spicchi. Adagia la rucola condita con l'olio su un piatto. Aggiungi il prosciutto crudo e le uova.",
+    "proteine_g": 21.1,
+    "grassi_g": 17.7,
+    "carbo_netti_g": 1.8,
+    "kcal": 251,
+    "minuti": 15,
+    "tag": ["uova", "carne", "veloce"]
+  },
+  {
+    "nome": "Ricotta con salmone e rucola",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "ricotta vaccina", "quantita": 100, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "salmone affumicato", "quantita": 40, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "rucola", "quantita": 30, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiaini", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Spalma la ricotta su un piatto. Disponi sopra la rucola condita con l'olio e il salmone affumicato a striscioline. Servi fredda.",
+    "proteine_g": 19.0,
+    "grassi_g": 18.9,
+    "carbo_netti_g": 3.6,
+    "kcal": 261,
+    "minuti": 10,
+    "tag": ["pesce", "formaggio", "veloce", "senza_cottura"]
+  },
+  {
+    "nome": "Mousse di avocado e yogurt",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "avocado", "quantita": 80, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "yogurt greco bianco non zuccherato", "quantita": 100, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "noci", "quantita": 10, "unita": "g", "reparto": "Dispensa"},
+      {"nome": "succo di limone", "quantita": 5, "unita": "ml", "reparto": "Frutta e verdura"}
+    ],
+    "preparazione": "Frulla la polpa di avocado con lo yogurt greco e il succo di limone fino a ottenere una crema liscia. Versa in una coppetta e completa con le noci tritate. Consuma subito.",
+    "proteine_g": 12.1,
+    "grassi_g": 23.5,
+    "carbo_netti_g": 6.8,
+    "kcal": 287,
+    "minuti": 10,
+    "tag": ["vegetariano", "veloce", "senza_cottura"]
+  },
+  {
+    "nome": "Omelette al caprino e rucola",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "uova", "quantita": 2, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "caprino fresco", "quantita": 30, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "rucola", "quantita": 30, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiaini", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Sbatti le uova e cuocile in padella con l'olio come una omelette. Quando e' quasi rappresa, distribuisci sopra il caprino a pezzetti. Ripiega e servi con la rucola a lato.",
+    "proteine_g": 18.8,
+    "grassi_g": 19.1,
+    "carbo_netti_g": 1.7,
+    "kcal": 254,
+    "minuti": 15,
+    "tag": ["uova", "formaggio", "vegetariano", "veloce"]
+  },
+  {
+    "nome": "Uova strapazzate con bresaola",
+    "pasto": "colazione",
+    "ingredienti": [
+      {"nome": "uova", "quantita": 2, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "bresaola", "quantita": 40, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "rucola", "quantita": 20, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiaini", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Scalda l'olio e versa le uova sbattute, mescolando a fuoco dolce fino a renderle cremose. Taglia la bresaola a striscioline e uniscila alle uova. Servi con la rucola fresca.",
+    "proteine_g": 25.9,
+    "grassi_g": 14.2,
+    "carbo_netti_g": 1.2,
+    "kcal": 236,
+    "minuti": 15,
+    "tag": ["uova", "carne", "veloce"]
+  },
+  {
+    "nome": "Petto di pollo alla griglia con zucchine",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "petto di pollo", "quantita": 150, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "zucchine", "quantita": 150, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Griglia il petto di pollo a fette sottili per circa sei minuti per lato. Affetta le zucchine nel senso della lunghezza e falle grigliare. Condisci tutto con l'olio.",
+    "proteine_g": 36.3,
+    "grassi_g": 12.3,
+    "carbo_netti_g": 3.2,
+    "kcal": 269,
+    "minuti": 25,
+    "tag": ["carne"]
+  },
+  {
+    "nome": "Salmone al forno con asparagi",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "salmone", "quantita": 150, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "asparagi", "quantita": 150, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"},
+      {"nome": "succo di limone", "quantita": 10, "unita": "ml", "reparto": "Frutta e verdura"}
+    ],
+    "preparazione": "Disponi il salmone e gli asparagi su una teglia con carta forno. Irrora con l'olio e il succo di limone. Inforna a 200 gradi per circa 15 minuti.",
+    "proteine_g": 33.3,
+    "grassi_g": 29.7,
+    "carbo_netti_g": 3.6,
+    "kcal": 415,
+    "minuti": 25,
+    "tag": ["pesce"]
+  },
+  {
+    "nome": "Bistecca di manzo con spinaci saltati",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "manzo bistecca", "quantita": 150, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "spinaci", "quantita": 150, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiaini", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Cuoci la bistecca in padella ben calda per tre-quattro minuti per lato, poi lasciala riposare. Nella stessa padella salta gli spinaci con l'olio per due minuti. Servi la carne con gli spinaci a lato.",
+    "proteine_g": 35.9,
+    "grassi_g": 12.9,
+    "carbo_netti_g": 2.1,
+    "kcal": 268,
+    "minuti": 15,
+    "tag": ["carne", "veloce"]
+  },
+  {
+    "nome": "Insalata di tonno e uova sode",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "tonno al naturale sgocciolato", "quantita": 100, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "uova", "quantita": 2, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "lattuga", "quantita": 100, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "pomodorini", "quantita": 80, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Cuoci le uova per nove minuti, raffreddale e tagliale a spicchi. Disponi la lattuga e i pomodorini tagliati in due. Aggiungi il tonno sgocciolato e le uova, poi condisci con l'olio.",
+    "proteine_g": 39.7,
+    "grassi_g": 21.0,
+    "carbo_netti_g": 4.5,
+    "kcal": 366,
+    "minuti": 15,
+    "tag": ["pesce", "uova", "veloce"]
+  },
+  {
+    "nome": "Polpette di manzo al forno con zucchine",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "manzo macinato", "quantita": 150, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "uova", "quantita": 1, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "parmigiano grattugiato", "quantita": 20, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "zucchine", "quantita": 150, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Impasta il manzo con l'uovo e il parmigiano, poi forma delle polpette. Cuocile in forno a 200 gradi per 15 minuti insieme alle zucchine a rondelle condite con l'olio. Servi caldo.",
+    "proteine_g": 45.1,
+    "grassi_g": 34.2,
+    "carbo_netti_g": 3.6,
+    "kcal": 503,
+    "minuti": 30,
+    "tag": ["carne", "uova", "formaggio"]
+  },
+  {
+    "nome": "Cotolette di pollo al parmigiano",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "petto di pollo", "quantita": 150, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "uova", "quantita": 1, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "parmigiano grattugiato", "quantita": 30, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Batti il pollo a fettine sottili. Passale nell'uovo sbattuto e poi nel parmigiano, quindi cuocile nell'olio per cinque minuti per lato. Servi subito, quando la crosticina e' dorata.",
+    "proteine_g": 51.3,
+    "grassi_g": 24.7,
+    "carbo_netti_g": 0.4,
+    "kcal": 429,
+    "minuti": 25,
+    "tag": ["carne", "uova", "formaggio"]
+  },
+  {
+    "nome": "Gamberi all'aglio con spinaci",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "gamberi sgusciati", "quantita": 200, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "spinaci", "quantita": 150, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"},
+      {"nome": "aglio", "quantita": 1, "unita": "pz", "reparto": "Frutta e verdura"}
+    ],
+    "preparazione": "Scalda l'olio con lo spicchio d'aglio schiacciato. Aggiungi i gamberi e falli cuocere due-tre minuti per lato. Unisci gli spinaci e saltali finche' appassiscono.",
+    "proteine_g": 44.6,
+    "grassi_g": 12.6,
+    "carbo_netti_g": 3.1,
+    "kcal": 304,
+    "minuti": 15,
+    "tag": ["pesce", "veloce"]
+  },
+  {
+    "nome": "Merluzzo al pomodoro e olive",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "merluzzo", "quantita": 180, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "pomodori pelati", "quantita": 150, "unita": "g", "reparto": "Dispensa"},
+      {"nome": "olive taggiasche", "quantita": 20, "unita": "g", "reparto": "Dispensa"},
+      {"nome": "aglio", "quantita": 1, "unita": "pz", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Soffriggi l'aglio nell'olio, aggiungi i pomodori pelati schiacciati e le olive. Cuoci per cinque minuti, poi adagia il merluzzo e prosegui la cottura coperto per circa dieci minuti.",
+    "proteine_g": 32.5,
+    "grassi_g": 14.6,
+    "carbo_netti_g": 5.2,
+    "kcal": 282,
+    "minuti": 25,
+    "tag": ["pesce"]
+  },
+  {
+    "nome": "Caprese di mozzarella e pomodorini",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "mozzarella", "quantita": 125, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "pomodorini", "quantita": 150, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "basilico", "quantita": 5, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Taglia i pomodorini a metà e la mozzarella a fette. Alterna le due cose su un piatto con le foglie di basilico. Irrora con l'olio e servi.",
+    "proteine_g": 23.9,
+    "grassi_g": 31.6,
+    "carbo_netti_g": 5.3,
+    "kcal": 401,
+    "minuti": 10,
+    "tag": ["formaggio", "vegetariano", "veloce", "senza_cottura"]
+  },
+  {
+    "nome": "Pollo al limone con broccoli",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "petto di pollo", "quantita": 150, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "broccoli", "quantita": 120, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "succo di limone", "quantita": 15, "unita": "ml", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Cuoci le cimette di broccolo al vapore per cinque minuti. Rosola il pollo a fettine nell'olio, sfumando con il succo di limone. Servi il pollo con i broccoli.",
+    "proteine_g": 37.9,
+    "grassi_g": 12.3,
+    "carbo_netti_g": 6.2,
+    "kcal": 287,
+    "minuti": 25,
+    "tag": ["carne"]
+  },
+  {
+    "nome": "Calamari grigliati con rucola",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "calamari", "quantita": 150, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "rucola", "quantita": 50, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "succo di limone", "quantita": 10, "unita": "ml", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Taglia i calamari ad anelli e ad anelli grandi per la griglia. Grigliali due-tre minuti per lato, finche' diventano opachi. Servi su un letto di rucola condita con olio e succo di limone.",
+    "proteine_g": 25.3,
+    "grassi_g": 12.6,
+    "carbo_netti_g": 6.6,
+    "kcal": 241,
+    "minuti": 20,
+    "tag": ["pesce"]
+  },
+  {
+    "nome": "Involtini di vitello con spinaci e prosciutto",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "fettine di vitello", "quantita": 150, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "prosciutto crudo", "quantita": 40, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "spinaci", "quantita": 100, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "burro", "quantita": 10, "unita": "g", "reparto": "Latticini e uova"}
+    ],
+    "preparazione": "Appassisci gli spinaci nel burro. Stendi le fettine di vitello, coprile con il prosciutto e gli spinaci, poi arrotolale e fermale con uno stuzzicadenti. Cuoci in padella con un po' di burro per circa dieci minuti, girandole spesso.",
+    "proteine_g": 42.9,
+    "grassi_g": 20.5,
+    "carbo_netti_g": 1.6,
+    "kcal": 363,
+    "minuti": 30,
+    "tag": ["carne"]
+  },
+  {
+    "nome": "Sgombro al limone con insalata",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "sgombro", "quantita": 150, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "lattuga", "quantita": 100, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "pomodorini", "quantita": 80, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "succo di limone", "quantita": 10, "unita": "ml", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiaini", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Cuoci lo sgombro in padella antiaderente per quattro minuti per lato. Condisci la lattuga e i pomodorini con l'olio e il succo di limone. Servi lo sgombro tiepido sull'insalata.",
+    "proteine_g": 30.7,
+    "grassi_g": 24.7,
+    "carbo_netti_g": 4.6,
+    "kcal": 364,
+    "minuti": 15,
+    "tag": ["pesce", "veloce"]
+  },
+  {
+    "nome": "Cozze al pomodorino",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "cozze", "quantita": 150, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "pomodorini", "quantita": 50, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "prezzemolo", "quantita": 10, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Pulisci le cozze e falle aprire in una padella coperta per cinque minuti. Unisci i pomodorini tagliati e cuoci ancora due minuti. Termina con l'olio e il prezzemolo tritato.",
+    "proteine_g": 18.8,
+    "grassi_g": 13.5,
+    "carbo_netti_g": 7.0,
+    "kcal": 225,
+    "minuti": 20,
+    "tag": ["pesce"]
+  },
+  {
+    "nome": "Pesce spada alla griglia con pomodorini",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "pesce spada", "quantita": 180, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "pomodorini", "quantita": 100, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "basilico", "quantita": 5, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Griglia il pesce spada a tranci per cinque minuti per lato. Scalda i pomodorini tagliati in padella con l'olio per tre minuti. Servi il pesce con i pomodorini e il basilico spezzato.",
+    "proteine_g": 35.1,
+    "grassi_g": 21.0,
+    "carbo_netti_g": 2.7,
+    "kcal": 340,
+    "minuti": 20,
+    "tag": ["pesce"]
+  },
+  {
+    "nome": "Tagliata di manzo con rucola e grana",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "manzo bistecca", "quantita": 150, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "rucola", "quantita": 80, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "parmigiano grattugiato", "quantita": 20, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Cuoci la bistecca in padella molto calda per tre-quattro minuti per lato, poi lasciala riposare e affettala. Disponi le fette su un letto di rucola condita con l'olio. Completa con scaglie di grana.",
+    "proteine_g": 40.6,
+    "grassi_g": 25.0,
+    "carbo_netti_g": 1.7,
+    "kcal": 394,
+    "minuti": 15,
+    "tag": ["carne", "formaggio", "veloce"]
+  },
+  {
+    "nome": "Spaghetti di zucchine al ragu' di manzo",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "manzo macinato", "quantita": 120, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "pomodori pelati", "quantita": 100, "unita": "g", "reparto": "Dispensa"},
+      {"nome": "zucchine", "quantita": 200, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Rosola il manzo macinato nell'olio, poi aggiungi i pomodori pelati e cuoci per 15 minuti. Ricava dalle zucchine dei lunghi spaghetti con il pelapatate o un affettatore e scottale due minuti. Servi il ragu' sopra le zucchine.",
+    "proteine_g": 27.4,
+    "grassi_g": 21.6,
+    "carbo_netti_g": 6.7,
+    "kcal": 331,
+    "minuti": 30,
+    "tag": ["carne"]
+  },
+  {
+    "nome": "Frittata di spinaci e ricotta",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "uova", "quantita": 3, "unita": "pz", "reparto": "Latticini e uova"},
+      {"nome": "spinaci", "quantita": 150, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "ricotta vaccina", "quantita": 50, "unita": "g", "reparto": "Latticini e uova"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiaini", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Appassisci gli spinaci nell'olio e lasciali intiepidire. Sbatti le uova con la ricotta, unisci gli spinaci e versa in padella. Cuoci coperto a fuoco basso finche' la frittata e' rappresa.",
+    "proteine_g": 28.8,
+    "grassi_g": 24.8,
+    "carbo_netti_g": 4.8,
+    "kcal": 358,
+    "minuti": 20,
+    "tag": ["uova", "formaggio", "vegetariano"]
+  },
+  {
+    "nome": "Burger di manzo in foglie di lattuga",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "manzo macinato", "quantita": 150, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "avocado", "quantita": 60, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "pomodorini", "quantita": 50, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "lattuga", "quantita": 50, "unita": "g", "reparto": "Frutta e verdura"}
+    ],
+    "preparazione": "Forma una polpetta di manzo schiacciata e cuocila in padella per cinque minuti per lato. Usa le foglie di lattuga al posto del pane. Farcisci con l'avocado a fette e i pomodorini tagliati.",
+    "proteine_g": 32.4,
+    "grassi_g": 22.7,
+    "carbo_netti_g": 3.3,
+    "kcal": 347,
+    "minuti": 15,
+    "tag": ["carne", "veloce"]
+  },
+  {
+    "nome": "Petto di tacchino con funghi trifolati",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "petto di tacchino", "quantita": 150, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "funghi champignon", "quantita": 200, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "aglio", "quantita": 1, "unita": "pz", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Affetta i funghi e trifolali nell'olio con lo spicchio d'aglio per dieci minuti. Cuoci il tacchino a fette in una padella a parte per sei minuti per lato. Servi la carne con i funghi.",
+    "proteine_g": 42.4,
+    "grassi_g": 12.9,
+    "carbo_netti_g": 5.6,
+    "kcal": 308,
+    "minuti": 25,
+    "tag": ["carne"]
+  },
+  {
+    "nome": "Lonza di maiale con cavolfiore",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "lonza di maiale", "quantita": 150, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "cavolfiore", "quantita": 200, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Cuoci il cavolfiore a cimette al vapore per dieci minuti, poi saltalo nell'olio. Taglia la lonza a fette e cuocila in padella per circa dieci minuti, girandola spesso. Servi insieme.",
+    "proteine_g": 35.3,
+    "grassi_g": 18.1,
+    "carbo_netti_g": 6.0,
+    "kcal": 328,
+    "minuti": 30,
+    "tag": ["carne"]
+  },
+  {
+    "nome": "Seppie in umido con spinaci",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "seppie", "quantita": 200, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "spinaci", "quantita": 150, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "pomodori pelati", "quantita": 80, "unita": "g", "reparto": "Dispensa"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Rosola le seppie a rondelle nell'olio per cinque minuti. Aggiungi i pomodori pelati e cuoci coperto per circa venti minuti. Unisci gli spinaci nel finale e lasciali appassire.",
+    "proteine_g": 37.2,
+    "grassi_g": 12.4,
+    "carbo_netti_g": 6.1,
+    "kcal": 285,
+    "minuti": 30,
+    "tag": ["pesce"]
+  },
+  {
+    "nome": "Pollo alla cacciatora",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "petto di pollo", "quantita": 180, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "funghi champignon", "quantita": 100, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "pomodori pelati", "quantita": 100, "unita": "g", "reparto": "Dispensa"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiai", "reparto": "Dispensa"}
+    ],
+    "preparazione": "Rosola il pollo a bocconcini nell'olio per cinque minuti. Aggiungi i funghi affettati e i pomodori pelati, poi cuoci coperto a fuoco basso per 20 minuti. Servi caldo.",
+    "proteine_g": 45.5,
+    "grassi_g": 12.7,
+    "carbo_netti_g": 4.8,
+    "kcal": 316,
+    "minuti": 30,
+    "tag": ["carne"]
+  },
+  {
+    "nome": "Insalata di pollo e avocado",
+    "pasto": "pranzo",
+    "ingredienti": [
+      {"nome": "petto di pollo", "quantita": 150, "unita": "g", "reparto": "Carne e pesce"},
+      {"nome": "avocado", "quantita": 80, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "lattuga", "quantita": 100, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "pomodorini", "quantita": 80, "unita": "g", "reparto": "Frutta e verdura"},
+      {"nome": "olio extravergine d'oliva", "quantita": 1, "unita": "cucchiaini", "reparto": "Dispensa"},
+      {"nome": "succo di limone", "quantita": 10, "unita": "ml", "reparto": "Frutta e verdura"}
+    ],
+    "preparazione": "Cuoci il pollo a fettine in padella per sei minuti per lato e lascialo intiepidire. Disponi la lattuga, i pomodorini e l'avocado a cubetti in una ciotola. Aggiungi il pollo e condisci con l'olio e il succo di limone.",
+    "proteine_g": 38.2,
+    "grassi_g": 17.5,
+    "carbo_netti_g": 6.2,
+    "kcal": 335,
+    "minuti": 20,
+    "tag": ["carne"]
+  }
+]
