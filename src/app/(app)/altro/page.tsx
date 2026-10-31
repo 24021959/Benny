@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { BottoneEsci } from "@/components/esci";
 import { altre as vociAltro } from "@/components/nav-voci";
 
 export default function Altro() {
@@ -15,7 +16,7 @@ export default function Altro() {
           </Link>
         ))}
       </div>
-      <form action="/auth/esci" method="post"><button className="btn-ghost w-full">Esci</button></form>
+      <BottoneEsci />
     </div>
   );
 }

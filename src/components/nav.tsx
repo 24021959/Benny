@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Activity, MoreHorizontal } from "lucide-react";
+import { BottoneEsci } from "./esci";
 import { altre, principali } from "./nav-voci";
 
 const attivo = (path: string, href: string) => (href === "/" ? path === "/" : path.startsWith(href));
@@ -24,9 +25,7 @@ export function NavDesktop() {
           </Link>
         ))}
       </nav>
-      <form action="/auth/esci" method="post">
-        <button className="w-full rounded-2xl px-4 py-3 text-left text-base font-semibold text-muted hover:bg-card2">Esci</button>
-      </form>
+      <BottoneEsci />
     </aside>
   );
 }
