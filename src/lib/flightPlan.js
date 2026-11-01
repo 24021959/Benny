@@ -32,24 +32,40 @@ export function distanceKm(a, b) {
 const along = (a, b, t) => ({ lat: a.lat + (b.lat - a.lat) * t, lng: a.lng + (b.lng - a.lng) * t });
 const fix = (n, d = 5) => Number(n).toFixed(d);
 
-// Piano "Launch & Glide": decollo dalla Locanda, salita in quota, planata, orbita sul punto di interesse.
+const pointShortOf = (a, b, meters) => {
+  const total = distanceKm(a, b) * 1000;
+  return along(a, b, Math.max(0, Math.min(1, 1 - meters / total)));
+};
+
+// Piano "Launch & Glide": inquadratura verticale sulla Locanda, salita in quota, planata
+// e arrivo davanti al punto di interesse (che finisce al centro dell'inquadratura).
+// Nessun limite alla durata: i keyframe si distribuiscono sul tempo scelto.
 export function buildPlan(target, { duration = 18, peakAlt = 450 } = {}) {
   const D = Math.max(8, Math.round(duration));
   const head = Math.round(bearing(LOCANDA, target)) % 360;
-  const p30 = along(LOCANDA, target, 0.3);
-  const p85 = along(LOCANDA, target, 0.85);
+  const totalM = distanceKm(LOCANDA, target) * 1000;
+  const standoff = Math.round(Math.min(250, totalM * 0.4));
+  const arrival = pointShortOf(LOCANDA, target, standoff);
+  const arrivalAlt = 150;
+  const arrivalTilt = Math.max(40, Math.min(70, Math.round(deg(Math.atan2(standoff, arrivalAlt)))));
+  const p25 = along(LOCANDA, target, 0.25);
+  const p80 = along(LOCANDA, target, 0.8);
+
+  const tHold = Math.max(2, Math.round(D * 0.1));
+  const tClimb = Math.max(tHold + 1, Math.round(D * 0.3));
+  const tGlide = Math.max(tClimb + 1, Math.round(D * 0.65));
 
   return [
-    { t: 0, name: 'Launch', where: 'Locanda (Ameglia)', lat: LOCANDA.lat, lng: LOCANDA.lng, alt: 40, tilt: 75, heading: head,
-      note: 'Partenza bassa sui tetti della Locanda.' },
-    { t: Math.round(D * 0.17), name: 'Salita in quota', where: 'In rotta verso il punto', lat: p30.lat, lng: p30.lng, alt: peakAlt, tilt: 55, heading: head,
+    { t: 0, name: 'Inquadratura verticale', where: 'Sopra la Locanda', lat: LOCANDA.lat, lng: LOCANDA.lng, alt: 150, tilt: 0, heading: head,
+      note: "Camera a piombo (tilt 0°): la Locanda è al centro dell'inquadratura." },
+    { t: tHold, name: 'Pausa sulla Locanda', where: 'Sopra la Locanda', lat: LOCANDA.lat, lng: LOCANDA.lng, alt: 150, tilt: 0, heading: head,
+      note: `Stessi valori del primo: tiene ferma l'inquadratura per ${tHold} secondi.` },
+    { t: tClimb, name: 'Salita in quota', where: 'In rotta verso il punto', lat: p25.lat, lng: p25.lng, alt: peakAlt, tilt: 55, heading: head,
       note: "Quota massima: mostra l'orientamento di costa e valle." },
-    { t: Math.round(D * 0.45), name: 'Glide', where: 'Avvicinamento', lat: p85.lat, lng: p85.lng, alt: 150, tilt: 65, heading: head,
+    { t: tGlide, name: 'Glide', where: 'Avvicinamento', lat: p80.lat, lng: p80.lng, alt: 260, tilt: 62, heading: head,
       note: 'Discesa morbida verso il monumento.' },
-    { t: Math.round(D * 0.65), name: 'Arrivo sul punto', where: 'Punto di interesse', lat: target.lat, lng: target.lng, alt: 100, tilt: 60, heading: head,
-      note: 'Imposta il punto come Target (Look at) e range ~250 m.' },
-    { t: D, name: 'Orbita 360°', where: 'Punto di interesse', lat: target.lat, lng: target.lng, alt: 100, tilt: 60, heading: head + 360,
-      note: "Stesso target: l'heading sale di 360° per un'orbita completa." },
+    { t: D, name: 'Arrivo sul punto', where: `A ${standoff} m dal punto`, lat: arrival.lat, lng: arrival.lng, alt: arrivalAlt, tilt: arrivalTilt, heading: head,
+      note: 'Fine del volo: il punto di interesse è davanti alla camera, al centro del fotogramma.' },
   ];
 }
 

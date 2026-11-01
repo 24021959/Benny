@@ -35,7 +35,7 @@ const EARTH_STUDIO_CHECKS = [
   'Ho aperto earth.google.com/studio e creato un nuovo progetto',
   'Ho impostato durata e fotogrammi come nella scheda del passo 2',
   'Ho inserito i 5 keyframe (tempo, posizione, quota, tilt, heading)',
-  "Nell'ultimo tratto ho usato il punto di interesse come Target (Look at)",
+  "L'ultimo keyframe arriva davanti al punto di interesse, al centro del fotogramma",
   "Nell'anteprima il movimento è fluido",
   'Render: dimensioni personalizzate 1080×1920, 30 fps',
   'Le attribuzioni Google restano visibili nel fotogramma',
@@ -147,7 +147,7 @@ export default function Studio({ flythroughs, categories, fallbackThumb, onSave,
   const setEdit = (patch) => setForm((f) => ({ ...f, edit: { ...f.edit, ...patch } }));
 
   const target = useMemo(() => parseCoords(form.coordinates), [form.coordinates]);
-  const planDuration = Math.min(60, Math.max(8, Number(form.duration) || 18));
+  const planDuration = Math.max(8, Number(form.duration) || 18);
   const plan = useMemo(
     () => (target ? buildPlan(target, { duration: planDuration, peakAlt: Number(form.peakAlt) || 450 }) : []),
     [target, planDuration, form.peakAlt]
@@ -274,7 +274,7 @@ export default function Studio({ flythroughs, categories, fallbackThumb, onSave,
         if (oldBlobId) await deleteVideo(oldBlobId);
       }
       const hasEdit = edit.out > edit.in;
-      const duration = Math.min(60, Math.max(3, Number((trimDur ?? (Number(form.duration) || 18)).toFixed(1))));
+      const duration = Math.max(3, Number((trimDur ?? (Number(form.duration) || 18)).toFixed(1)));
       onSave({
         id,
         title: form.title.trim(),
@@ -449,7 +449,7 @@ export default function Studio({ flythroughs, categories, fallbackThumb, onSave,
             </p>
             <div className="grid grid-cols-2 gap-2">
               <Field label="Durata (secondi)">
-                <input type="number" min="8" max="60" value={form.duration} onChange={set('duration')} className={inputCls} />
+                <input type="number" min="8" value={form.duration} onChange={set('duration')} className={inputCls} />
               </Field>
               <Field label="Quota massima (m)">
                 <input type="number" min="100" max="1500" value={form.peakAlt} onChange={set('peakAlt')} className={inputCls} />
@@ -491,8 +491,8 @@ export default function Studio({ flythroughs, categories, fallbackThumb, onSave,
             </div>
 
             <p className="text-[10px] text-stone-500 leading-relaxed">
-              Partenza: Locanda dell'Angelo ({LOCANDA.lat.toFixed(5)}, {LOCANDA.lng.toFixed(5)}). Nell'ultimo tratto
-              imposta il punto di interesse come Target.
+              Partenza: Locanda dell'Angelo ({LOCANDA.lat.toFixed(5)}, {LOCANDA.lng.toFixed(5)}). Il volo termina davanti
+              al punto di interesse; la durata non ha limiti, ma clip lunghe pesano di più sui telefoni.
             </p>
           </div>
         )}
