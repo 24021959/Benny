@@ -491,8 +491,8 @@ export default function Studio({ flythroughs, categories, fallbackThumb, onSave,
             </div>
 
             <p className="text-[10px] text-stone-500 leading-relaxed">
-              Partenza: Ameglia ({LOCANDA.lat}, {LOCANDA.lng}), valore approssimato da correggere con la posizione esatta
-              della Locanda. Nell'ultimo tratto imposta il punto di interesse come Target.
+              Partenza: Locanda dell'Angelo ({LOCANDA.lat.toFixed(5)}, {LOCANDA.lng.toFixed(5)}). Nell'ultimo tratto
+              imposta il punto di interesse come Target.
             </p>
           </div>
         )}

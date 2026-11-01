@@ -1,5 +1,5 @@
-// Punto di decollo: Ameglia (Locanda dell'Angelo). Verifica le coordinate esatte su Google Maps.
-export const LOCANDA = { name: "Locanda dell'Angelo (Ameglia)", lat: 44.07, lng: 9.971 };
+// Punto di decollo: coordinate esatte della Locanda dell'Angelo (Ameglia).
+export const LOCANDA = { name: "Locanda dell'Angelo (Ameglia)", lat: 44.06096018809498, lng: 9.996431985304694 };
 
 const rad = (d) => (d * Math.PI) / 180;
 const deg = (r) => (r * 180) / Math.PI;
