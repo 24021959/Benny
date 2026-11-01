@@ -235,6 +235,23 @@ export default function App() {
     else v.play().catch(() => {});
   }, [paused, viewMode, activeSrc]);
 
+  // ---------- montaggio non distruttivo (taglio, velocità) ----------
+  useEffect(() => {
+    if (viewMode !== 'player') return undefined;
+    const ed = active?.edit;
+    const apply = () => {
+      const v = videoRef.current;
+      if (!v) return;
+      v.playbackRate = ed?.speed || 1;
+      if (ed && ed.out > ed.in && (v.currentTime >= ed.out - 0.04 || v.currentTime < ed.in - 0.5)) {
+        v.currentTime = ed.in;
+      }
+    };
+    apply();
+    const id = setInterval(apply, 80);
+    return () => clearInterval(id);
+  }, [viewMode, active, activeSrc]);
+
   // ---------- favorites ----------
   const toggleFavorite = (id, e) => {
     if (e) e.stopPropagation();
@@ -396,6 +413,8 @@ export default function App() {
     selectedCategory === 'Tutti' ? flythroughs : flythroughs.filter((f) => f.category === selectedCategory);
 
   // ---------- telemetria simulata ----------
+  const clipT = (progress / 100) * active.duration;
+  const fadeOpacity = Math.min(1, Math.max(0, 1 - clipT / 0.8, 1 - (active.duration - clipT) / 0.8));
   const peak = num(active.altitudePeak, 300);
   const cruise = num(active.speed, 45);
   const simAltitude = Math.round(
@@ -560,10 +579,18 @@ export default function App() {
                 loop
                 playsInline
                 preload="auto"
+                onLoadedMetadata={(e) => {
+                  const ed = active.edit;
+                  e.currentTarget.playbackRate = ed?.speed || 1;
+                  if (ed && ed.out > ed.in) e.currentTarget.currentTime = ed.in;
+                }}
                 className={`w-full h-full object-cover brightness-[0.82] transition-opacity duration-300 ${
                   isPressing ? 'opacity-80' : 'opacity-100'
                 }`}
               />
+              {active.edit?.fade && (
+                <div className="absolute inset-0 bg-black pointer-events-none" style={{ opacity: fadeOpacity }} />
+              )}
               <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-transparent to-black/90 pointer-events-none" />
             </div>
 
