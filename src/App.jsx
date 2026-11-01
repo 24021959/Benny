@@ -490,11 +490,12 @@ export default function App() {
                     onClick={() => openPlayerAt(originalIndex)}
                     className="group relative rounded-2xl overflow-hidden bg-stone-900/90 border border-stone-800/80 shadow-lg hover:border-amber-500/50 transition-all cursor-pointer"
                   >
-                    <div className="relative h-44 w-full overflow-hidden">
+                    <div className="relative h-44 w-full overflow-hidden bg-gradient-to-br from-stone-800 via-amber-950 to-stone-900">
                       <img
                         src={item.thumbnail}
                         alt={item.title}
                         loading="lazy"
+                        onError={(e) => { e.currentTarget.style.visibility = 'hidden'; }}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-90"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/30 to-transparent" />
@@ -579,7 +580,7 @@ export default function App() {
             onPointerCancel={onPointerCancel}
             onContextMenu={(e) => e.preventDefault()}
           >
-            <div className="absolute inset-0 bg-stone-950 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-stone-900 via-amber-950 to-stone-950 overflow-hidden">
               <video
                 key={active.videoUrl}
                 ref={videoRef}
