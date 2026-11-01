@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import {
   Play, Pause, MapPin, Compass, Navigation, Heart,
-  Lock, Unlock, Plus, Settings, Check, Sparkles, X, Car, Clock,
-  Send, Layers, Info, ArrowLeft, Copy, Trash2, RotateCcw, Gauge, Mountain,
+  Lock, Unlock, Settings, Check, X, Car, Clock,
+  Send, Layers, Info, ArrowLeft, Copy, Gauge, Mountain,
 } from 'lucide-react';
+import Studio from './Studio.jsx';
+import { deleteVideo, useReelSrc } from './lib/videoStore.js';
 
 const IMG = {
   coast: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80',
@@ -164,21 +166,6 @@ function mapsUrl(coords) {
   return `https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=${encodeURIComponent(coords)}`;
 }
 
-const EMPTY_FORM = {
-  title: '',
-  category: 'Borghi Marinari',
-  timeFromInn: '15 min',
-  distance: '10 km',
-  coordinates: '44.0500, 9.9000',
-  bestTime: "18:00 (Luce d'oro)",
-  parkingTip: 'Parcheggio visitatori a 200m',
-  description: '',
-  waypoints: 'Decollo Locanda, Salita in quota, Orbita',
-  videoUrl: VID.cliffs,
-  thumbnail: IMG.coast,
-  duration: 20,
-};
-
 export default function App() {
   const [flythroughs, setFlythroughs] = useState(() => {
     const saved = loadJSON('locanda_flythroughs', null);
@@ -202,15 +189,13 @@ export default function App() {
     () => sessionStorage.getItem('locanda_staff_auth') === 'true'
   );
 
-  const [form, setForm] = useState(EMPTY_FORM);
-  const [studioSuccess, setStudioSuccess] = useState(false);
-
   const videoRef = useRef(null);
   const gesture = useRef({ x: 0, y: 0, pressed: false, timer: null, active: false });
 
   const safeIdx = Math.min(currentIdx, flythroughs.length - 1);
   const active = flythroughs[safeIdx] || flythroughs[0];
   const paused = !isPlaying || isPressing || showDrawer;
+  const activeSrc = useReelSrc(active);
 
   // ---------- persistence ----------
   useEffect(() => {
@@ -248,7 +233,7 @@ export default function App() {
     if (!v || viewMode !== 'player') return;
     if (paused) v.pause();
     else v.play().catch(() => {});
-  }, [paused, viewMode, active?.videoUrl]);
+  }, [paused, viewMode, activeSrc]);
 
   // ---------- favorites ----------
   const toggleFavorite = (id, e) => {
@@ -376,49 +361,35 @@ export default function App() {
     setViewMode('catalog');
   };
 
-  const setField = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
-
-  const handlePublish = (e) => {
-    e.preventDefault();
-    if (!form.title.trim()) return;
-    const newFly = {
-      id: 'custom-' + Date.now(),
-      title: form.title.trim(),
-      category: form.category,
-      timeFromInn: form.timeFromInn,
-      distance: form.distance,
-      coordinates: form.coordinates,
-      altitudePeak: '350 m',
-      speed: '45 km/h',
-      bestTime: form.bestTime,
-      parkingTip: form.parkingTip,
-      description: form.description || 'Nuovo sorvolo scenografico inserito dallo staff della Locanda.',
-      waypoints: form.waypoints.split(',').map((s) => s.trim()).filter(Boolean),
-      thumbnail: form.thumbnail || IMG.coast,
-      videoUrl: form.videoUrl,
-      duration: Math.max(5, num(form.duration, 20)),
-      badge: 'Nuovo Volo',
-    };
-    setFlythroughs((prev) => [newFly, ...prev]);
-    setStudioSuccess(true);
-    setTimeout(() => {
-      setStudioSuccess(false);
-      setForm(EMPTY_FORM);
-      openPlayerAt(0);
-    }, 1000);
+  const handleSaveReel = (reel) => {
+    setFlythroughs((prev) =>
+      prev.some((f) => f.id === reel.id)
+        ? prev.map((f) => (f.id === reel.id ? { ...f, ...reel, badge: reel.badge ?? f.badge } : f))
+        : [reel, ...prev]
+    );
   };
 
-  const deleteCustom = (id) => {
-    setFlythroughs((prev) => (prev.length > 1 ? prev.filter((f) => f.id !== id) : prev));
+  const deleteReel = (id) => {
+    if (flythroughs.length <= 1) return;
+    const victim = flythroughs.find((f) => f.id === id);
+    if (!victim || !window.confirm(`Eliminare "${victim.title}"?`)) return;
+    if (victim.videoBlobId) deleteVideo(victim.videoBlobId);
+    setFlythroughs((prev) => prev.filter((f) => f.id !== id));
     setFavorites((prev) => prev.filter((x) => x !== id));
     setCurrentIdx(0);
   };
 
   const resetDefaults = () => {
-    if (!window.confirm('Ripristinare i voli predefiniti? I reel aggiunti verranno rimossi.')) return;
+    if (!window.confirm('Ripristinare i voli predefiniti? I voli aggiunti verranno rimossi.')) return;
+    flythroughs.forEach((f) => { if (f.videoBlobId) deleteVideo(f.videoBlobId); });
     setFlythroughs(INITIAL_FLYTHROUGHS);
     setFavorites((prev) => prev.filter((id) => INITIAL_FLYTHROUGHS.some((f) => f.id === id)));
     setCurrentIdx(0);
+  };
+
+  const playReelById = (id) => {
+    const idx = flythroughs.findIndex((f) => f.id === id);
+    if (idx >= 0) openPlayerAt(idx);
   };
 
   const filteredCatalog =
@@ -433,8 +404,6 @@ export default function App() {
   const simSpeed = Math.round(cruise + Math.sin(progress / 8) * 4);
   const activeWp = Math.min(active.waypoints.length - 1, Math.floor((progress / 100) * active.waypoints.length));
 
-  const inputCls =
-    'w-full px-3 py-2 rounded-lg bg-stone-950 border border-stone-700 text-white focus:border-amber-500 outline-none';
 
   return (
     <div className="w-full h-[100dvh] bg-black flex justify-center">
@@ -582,9 +551,9 @@ export default function App() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-stone-900 via-amber-950 to-stone-950 overflow-hidden">
               <video
-                key={active.videoUrl}
+                key={activeSrc || active.id}
                 ref={videoRef}
-                src={active.videoUrl}
+                src={activeSrc || undefined}
                 poster={active.thumbnail}
                 autoPlay
                 muted
@@ -842,167 +811,15 @@ export default function App() {
               </div>
             </header>
 
-            <div className="flex-1 overflow-y-auto p-4 space-y-6 text-xs">
-              {/* Guida Google Earth Studio */}
-              <div className="p-4 rounded-xl bg-amber-950/20 border border-amber-500/30">
-                <h3 className="font-serif font-bold text-amber-200 text-sm flex items-center gap-1.5 mb-2">
-                  <Sparkles className="text-amber-400" size={15} />
-                  Come creare le clip con Google Earth Studio
-                </h3>
-                <ol className="list-decimal list-inside space-y-2 text-stone-300 leading-relaxed">
-                  <li>
-                    <strong className="text-amber-100">Progetto:</strong> su Google Earth Studio crea un nuovo progetto,
-                    imposta il formato verticale <em>1080×1920 (9:16)</em> e 30 fps.
-                  </li>
-                  <li>
-                    <strong className="text-amber-100">Launch (sec 00):</strong> primo keyframe sui tetti della
-                    Locanda ad Ameglia, quota ~40 m, camera quasi a piombo.
-                  </li>
-                  <li>
-                    <strong className="text-amber-100">Salita in quota (sec 03):</strong> alza la camera a 450 m
-                    inclinandola verso la costa o la valle, per mostrare l'orientamento.
-                  </li>
-                  <li>
-                    <strong className="text-amber-100">Glide &amp; Orbita (sec 08-18):</strong> scendi a ~80 m sul
-                    punto di interesse con una morbida orbita a 360°. Usa interpolazione "smooth" per movimenti fluidi.
-                  </li>
-                  <li>
-                    <strong className="text-amber-100">Export:</strong> renderizza la sequenza, assembla l'MP4 (es. con
-                    ffmpeg o un editor) e caricalo su un hosting che serva il file direttamente.
-                  </li>
-                  <li>
-                    <strong className="text-amber-100">Attribuzione Google:</strong> lascia visibili le attribuzioni
-                    (Google Earth, Landsat / Copernicus, ecc.) nel video, senza ritagliarle né coprirle, e rispetta i
-                    termini d'uso di Google Earth Studio per l'uso commerciale.
-                  </li>
-                </ol>
-              </div>
-
-              {/* Banco di montaggio */}
-              <form onSubmit={handlePublish} className="p-4 rounded-xl bg-stone-900 border border-stone-800 space-y-3.5">
-                <h3 className="font-serif font-bold text-white text-sm">Banco di montaggio: nuovo reel</h3>
-
-                {/* Anteprima live */}
-                <div className="flex gap-3 items-start">
-                  <div className="relative w-24 shrink-0 aspect-[9/16] rounded-lg overflow-hidden bg-black border border-stone-700">
-                    {form.videoUrl && (
-                      <video
-                        key={form.videoUrl}
-                        src={form.videoUrl}
-                        poster={form.thumbnail}
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        className="w-full h-full object-cover"
-                      />
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none" />
-                    <p className="absolute bottom-1 left-1 right-1 text-[8px] font-serif font-bold text-white leading-tight">
-                      {form.title || 'Anteprima'}
-                    </p>
-                  </div>
-                  <p className="text-[11px] text-stone-400 leading-relaxed">
-                    Anteprima in tempo reale del reel verticale. Compila i campi e premi "Aggiungi al Feed Ospiti":
-                    sarà subito visibile agli ospiti su questo dispositivo.
-                  </p>
-                </div>
-
-                <div>
-                  <label className="block text-[11px] font-medium text-stone-400 mb-1">Nome Monumento / Destinazione</label>
-                  <input type="text" value={form.title} onChange={setField('title')} placeholder="Es. Castello di Fosdinovo" className={inputCls} required />
-                </div>
-
-                <div className="grid grid-cols-2 gap-2">
-                  <div>
-                    <label className="block text-[11px] font-medium text-stone-400 mb-1">Categoria</label>
-                    <select value={form.category} onChange={setField('category')} className={inputCls}>
-                      {CATEGORIES.filter((c) => c !== 'Tutti').map((c) => (
-                        <option key={c} value={c}>{c}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-[11px] font-medium text-stone-400 mb-1">Durata clip (sec)</label>
-                    <input type="number" min="5" max="60" value={form.duration} onChange={setField('duration')} className={inputCls} />
-                  </div>
-                  <div>
-                    <label className="block text-[11px] font-medium text-stone-400 mb-1">Minuti di Auto</label>
-                    <input type="text" value={form.timeFromInn} onChange={setField('timeFromInn')} placeholder="Es. 18 min" className={inputCls} />
-                  </div>
-                  <div>
-                    <label className="block text-[11px] font-medium text-stone-400 mb-1">Distanza</label>
-                    <input type="text" value={form.distance} onChange={setField('distance')} placeholder="Es. 12 km" className={inputCls} />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-[11px] font-medium text-stone-400 mb-1">Coordinate GPS (lat, lng)</label>
-                  <input type="text" value={form.coordinates} onChange={setField('coordinates')} placeholder="44.0500, 9.9000" className={inputCls} />
-                </div>
-
-                <div>
-                  <label className="block text-[11px] font-medium text-stone-400 mb-1">Momento migliore</label>
-                  <input type="text" value={form.bestTime} onChange={setField('bestTime')} className={inputCls} />
-                </div>
-
-                <div>
-                  <label className="block text-[11px] font-medium text-stone-400 mb-1">Consiglio Parcheggio / Logistica</label>
-                  <input type="text" value={form.parkingTip} onChange={setField('parkingTip')} placeholder="Es. Parcheggio ai piedi delle mura" className={inputCls} />
-                </div>
-
-                <div>
-                  <label className="block text-[11px] font-medium text-stone-400 mb-1">Descrizione</label>
-                  <textarea rows={3} value={form.description} onChange={setField('description')} className={inputCls} />
-                </div>
-
-                <div>
-                  <label className="block text-[11px] font-medium text-stone-400 mb-1">Waypoint (separati da virgola)</label>
-                  <input type="text" value={form.waypoints} onChange={setField('waypoints')} className={inputCls} />
-                </div>
-
-                <div>
-                  <label className="block text-[11px] font-medium text-stone-400 mb-1">URL Video MP4</label>
-                  <input type="url" value={form.videoUrl} onChange={setField('videoUrl')} placeholder="https://tuodominio.it/video.mp4" className={`${inputCls} text-[11px]`} />
-                </div>
-
-                <div>
-                  <label className="block text-[11px] font-medium text-stone-400 mb-1">URL Immagine di copertina</label>
-                  <input type="url" value={form.thumbnail} onChange={setField('thumbnail')} placeholder="https://tuodominio.it/cover.jpg" className={`${inputCls} text-[11px]`} />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-xs shadow-lg shadow-amber-500/20 transition-all flex items-center justify-center gap-1.5"
-                >
-                  {studioSuccess ? <Check size={16} /> : <Plus size={16} />}
-                  {studioSuccess ? 'Reel Pubblicato con Successo!' : 'Aggiungi al Feed Ospiti'}
-                </button>
-              </form>
-
-              {/* Gestione reel */}
-              <div className="p-4 rounded-xl bg-stone-900 border border-stone-800 space-y-2">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-serif font-bold text-white text-sm">Reel pubblicati ({flythroughs.length})</h3>
-                  <button onClick={resetDefaults} className="flex items-center gap-1 text-[11px] text-stone-400 hover:text-amber-300">
-                    <RotateCcw size={12} /> Ripristina
-                  </button>
-                </div>
-                {flythroughs.map((f) => (
-                  <div key={f.id} className="flex items-center justify-between gap-2 py-1.5 border-t border-stone-800 first:border-0">
-                    <span className="truncate text-stone-300">{f.title}</span>
-                    <button
-                      onClick={() => deleteCustom(f.id)}
-                      disabled={flythroughs.length <= 1}
-                      aria-label={`Elimina ${f.title}`}
-                      className="p-1.5 rounded text-stone-500 hover:text-rose-400 disabled:opacity-30"
-                    >
-                      <Trash2 size={14} />
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <Studio
+              flythroughs={flythroughs}
+              categories={CATEGORIES}
+              fallbackThumb={IMG.coast}
+              onSave={handleSaveReel}
+              onDelete={deleteReel}
+              onReset={resetDefaults}
+              onPlay={playReelById}
+            />
           </div>
         )}
 
